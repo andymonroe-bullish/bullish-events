@@ -121,11 +121,11 @@ body {
 }
 
 .hero-headline {
-  font-size: clamp(36px, 5.5vw, 72px);
+  font-size: clamp(32px, 4.2vw, 56px);
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  max-width: 900px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  max-width: 1050px;
   margin: 0 auto 28px;
 }
 
