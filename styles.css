@@ -67,11 +67,14 @@ body {
   gap: 10px;
 }
 
-.logo-text {
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: 2px;
-  color: var(--text-primary);
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-img {
+  height: 28px;
 }
 
 .nav-links {
@@ -389,6 +392,14 @@ body {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
+  .logo-img {
+    height: 24px;
+  }
+
+  .footer-logo-img {
+    height: 22px;
+  }
+
   .nav-links {
     gap: 16px;
   }
