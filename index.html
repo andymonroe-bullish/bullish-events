@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullish Events — Find Your Perfect Event</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">BULLISH EVENTS</span>
+      </div>
+      <div class="nav-links">
+        <a href="#quiz" class="nav-link">Take the Quiz</a>
+        <a href="#contact" class="nav-link btn-outline">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-headline">
+        Discover the perfect in-person event to grow your business.
+      </h1>
+      <p class="hero-subtext">
+        Take our quick quiz and get a personalized recommendation for the type of event that will drive the most revenue, community, and authority for your brand.
+      </p>
+      <a href="#quiz" class="btn-primary">Take the Quiz &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz" class="quiz-section">
+    <div class="container">
+      <h2 class="section-title">What Event Should You Host?</h2>
+      <p class="section-subtitle">Answer a few questions and we'll recommend the ideal event format for your business.</p>
+
+      <div class="quiz-container">
+        <!-- Quiz Progress -->
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="progressFill"></div>
+          </div>
+          <span class="quiz-step-text" id="stepText">Question 1 of 5</span>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div class="quiz-questions" id="quizQuestions">
+
+          <div class="quiz-question active" data-step="1">
+            <h3>What best describes your business?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="coaching">Coaching / Consulting</button>
+              <button class="quiz-option" data-value="course">Online Course Creator</button>
+              <button class="quiz-option" data-value="community">Community / Membership</button>
+              <button class="quiz-option" data-value="agency">Agency / Service Provider</button>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-step="2">
+            <h3>How large is your current audience?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="small">Under 1,000</button>
+              <button class="quiz-option" data-value="medium">1,000 - 10,000</button>
+              <button class="quiz-option" data-value="large">10,000 - 50,000</button>
+              <button class="quiz-option" data-value="xlarge">50,000+</button>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-step="3">
+            <h3>What's your primary goal for hosting an event?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="revenue">Generate revenue</button>
+              <button class="quiz-option" data-value="community">Build community</button>
+              <button class="quiz-option" data-value="authority">Establish authority</button>
+              <button class="quiz-option" data-value="leads">Generate leads</button>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-step="4">
+            <h3>What's your budget for your first event?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="low">Under $5,000</button>
+              <button class="quiz-option" data-value="mid">$5,000 - $20,000</button>
+              <button class="quiz-option" data-value="high">$20,000 - $50,000</button>
+              <button class="quiz-option" data-value="premium">$50,000+</button>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-step="5">
+            <h3>How many attendees are you hoping for?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-value="intimate">10 - 30 (intimate)</button>
+              <button class="quiz-option" data-value="small">30 - 100</button>
+              <button class="quiz-option" data-value="medium">100 - 500</button>
+              <button class="quiz-option" data-value="large">500+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div class="quiz-result" id="quizResult" style="display: none;">
+          <div class="result-icon">&#127942;</div>
+          <h3 class="result-title" id="resultTitle">Your Ideal Event</h3>
+          <p class="result-description" id="resultDescription"></p>
+          <div class="result-card" id="resultCard">
+            <h4 id="resultEventType"></h4>
+            <p id="resultEventDetails"></p>
+          </div>
+          <p class="result-cta-text">Want help planning this? Let's talk.</p>
+          <a href="#contact" class="btn-primary">Book a Discovery Call &rarr;</a>
+          <button class="btn-secondary" id="retakeQuiz">Retake Quiz</button>
+        </div>
+
+        <p class="placeholder-notice">* This is a placeholder quiz. The AI-powered version is coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Ready to Host Your Event?</h2>
+      <p class="section-subtitle">Book a free discovery call and we'll help you plan the perfect in-person event for your business.</p>
+      <a href="#" class="btn-primary btn-large">Book a Discovery Call &rarr;</a>
+      <p class="contact-email">Or email us at <a href="mailto:hello@bullishevents.com">hello@bullishevents.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo-text">BULLISH EVENTS</span>
+      <p class="footer-copy">&copy; 2026 Bullish Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
