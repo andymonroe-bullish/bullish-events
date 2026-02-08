@@ -8,12 +8,48 @@ let currentStep = 1;
 const totalSteps = 5;
 
 function init() {
+  const modal = document.getElementById('quizModal');
+  const modalClose = document.getElementById('modalClose');
+
+  // Open modal from any quiz trigger button
+  document.querySelectorAll('.quiz-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      resetQuiz();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal with X button
+  modalClose.addEventListener('click', closeModal);
+
+  // Close modal by clicking backdrop
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
+
+  // Close modal when "Book a Discovery Call" is clicked in results
+  document.querySelector('.modal-cta-link').addEventListener('click', () => {
+    closeModal();
+  });
+
   document.querySelectorAll('.quiz-option').forEach(btn => {
     btn.addEventListener('click', handleOptionClick);
   });
 
   document.getElementById('retakeQuiz').addEventListener('click', resetQuiz);
   updateProgress();
+}
+
+function closeModal() {
+  document.getElementById('quizModal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 function handleOptionClick(e) {

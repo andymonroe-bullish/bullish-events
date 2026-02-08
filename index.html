@@ -18,7 +18,7 @@
         <img src="logo.png" alt="Bullish Events" class="logo-img">
       </div>
       <div class="nav-links">
-        <a href="#quiz" class="nav-link">Take the Quiz</a>
+        <a href="#" class="nav-link quiz-trigger">Take the Quiz</a>
         <a href="#contact" class="nav-link btn-outline">Book a Call</a>
       </div>
     </div>
@@ -28,20 +28,21 @@
   <section class="hero">
     <div class="container">
       <h1 class="hero-headline">
-        Discover the perfect in-person event to grow your business.
+        Determine The Perfect IRL Event Model To Grow Your Revenue, Community, &amp; Authority
       </h1>
       <p class="hero-subtext">
         Take our quick quiz and get a personalized recommendation for the type of event that will drive the most revenue, community, and authority for your brand.
       </p>
-      <a href="#quiz" class="btn-primary">Take the Quiz &rarr;</a>
+      <a href="#" class="btn-primary quiz-trigger">Take the Quiz &rarr;</a>
     </div>
   </section>
 
-  <!-- Quiz Section -->
-  <section id="quiz" class="quiz-section">
-    <div class="container">
-      <h2 class="section-title">What Event Should You Host?</h2>
-      <p class="section-subtitle">Answer a few questions and we'll recommend the ideal event format for your business.</p>
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quizModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 class="modal-title">What Event Should You Host?</h2>
+      <p class="modal-subtitle">Answer a few questions and we'll recommend the ideal event format for your business.</p>
 
       <div class="quiz-container">
         <!-- Quiz Progress -->
@@ -116,14 +117,14 @@
             <p id="resultEventDetails"></p>
           </div>
           <p class="result-cta-text">Want help planning this? Let's talk.</p>
-          <a href="#contact" class="btn-primary">Book a Discovery Call &rarr;</a>
+          <a href="#contact" class="btn-primary modal-cta-link">Book a Discovery Call &rarr;</a>
           <button class="btn-secondary" id="retakeQuiz">Retake Quiz</button>
         </div>
 
         <p class="placeholder-notice">* This is a placeholder quiz. The AI-powered version is coming soon.</p>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
